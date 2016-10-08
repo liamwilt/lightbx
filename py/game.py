@@ -76,9 +76,9 @@ def main():
     display = (1024,768)
     pygame.display.set_mode(display, DOUBLEBUF|OPENGL)
 
-    gluPerspective(45, (display[0]/display[1]), 0.1, 50.0)
+    gluPerspective(45, (display[0]/display[1]), 0.33, 50.0)
 
-    glTranslatef(0.0,0.0, -10)
+    glTranslatef(0.0,0.0, -6.6)
 
     while True:
         for event in pygame.event.get():
@@ -86,7 +86,7 @@ def main():
                 pygame.quit()
                 quit()
 
-        glRotatef(0.5, 1.5, 0.5, 0.5)
+        glRotatef(0.66, 1, -0.5, -0.5)
         glClear(GL_COLOR_BUFFER_BIT|GL_DEPTH_BUFFER_BIT)
         Cube()
         pygame.display.flip()
